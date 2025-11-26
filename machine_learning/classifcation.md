@@ -1,3 +1,6 @@
+Classifcation
+=======================
+
 # Discriminant Analysis
 ## Quadratic Discriminant Analysis
 * Assume $x | y=k \sim N(\mu_k, \Sigma_k)$ and that $p(y=k) = \pi_k$
