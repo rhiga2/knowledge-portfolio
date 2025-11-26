@@ -40,7 +40,7 @@ $$
 d_k(x) = \log p(y = k | x) = \log p(y = k) + \log p(x | y = k) = \log p(y = k) + \sum_{j=1}^d \log p(x_j | y = k)
 $$
 
-## Example: Naive Bayes QDA
+### Example: Naive Bayes QDA
 * Under the Naive Bayes assumption, the covariance matrix is diagonal $\Sigma_k = \text{diag}(\sigma_k)$. 
 
 $$
