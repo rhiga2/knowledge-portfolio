@@ -57,13 +57,13 @@ $$
   * $w$ are the parameters of our model.
 
 $$
-p(y | x) = p(y=1 | x) ^ {\delta_{1y}} p(y=0 | x) ^ {\delta_{0y}} = g(w^Tx) ^ {\delta_{1y}} (1 - g(w^Tx)) ^ {\delta_{0y}} 
+p(y | x) = p(y=1 | x) ^ {\delta_{y=1}} p(y=0 | x) ^ {\delta_{y=0}} = g(w^Tx) ^ {\delta_{y=1}} (1 - g(w^Tx)) ^ {\delta_{y=1}} 
 $$
 
 * To estimate $w$, we can use a cost function equal to the negative log-likehood function (maximum likelihood): 
 
 $$
-J(w) = -l(w) = -\delta_{1y} \log (g(w^Tx)) - \delta_{0y} \log (1 - g(w^Tx))
+J(w) = -l(w) = -\delta_{y=1} \log (g(w^Tx)) - \delta_{y=0} \log (1 - g(w^Tx))
 $$
 
 * There is no closed form solution so we must use gradient descent to find the maximum likelihood solution.
