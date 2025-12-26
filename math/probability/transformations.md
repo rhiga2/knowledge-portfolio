@@ -8,8 +8,8 @@ Transformation of Random Variables
 
 $$
 \begin{align*}
-P_Y(y) &= P(g(X) \le y) = P(X \le g^{-1}(y)) \\
-  &= P_X(g^{-1}(y))
+F_Y(y) &= P(g(X) \le y) = P(X \le g^{-1}(y)) \\
+  &= F_X(g^{-1}(y))
 \end{align*}
 $$
 
@@ -17,7 +17,7 @@ $$
 
 $$
 \begin{align*}
-p_Y(y) &= p_X(g^{-1}(y)) \frac{g^{-1}(y)}{dy}
+f_Y(y) &= f_X(g^{-1}(y)) \frac{g^{-1}(y)}{dy}
 \end{align*}
 $$
 
@@ -25,8 +25,8 @@ $$
 
 $$
 \begin{align*}
-P_Y(y) &= P(g(X) \le y) = P(X \ge g^{-1}(y)) \\
-  &= 1 - P_X(g^{-1}(y))
+F_Y(y) &= P(g(X) \le y) = P(X \ge g^{-1}(y)) \\
+  &= 1 - F_X(g^{-1}(y))
 \end{align*}
 $$
 
@@ -34,7 +34,7 @@ $$
 
 $$
 \begin{align*}
-p_Y(y) &= p_X(g^{-1}(y)) \left(-\frac{g^{-1}(y)}{dy}\right)
+f_Y(y) &= f_X(g^{-1}(y)) \left(-\frac{g^{-1}(y)}{dy}\right)
 \end{align*}
 $$
 
@@ -42,24 +42,25 @@ $$
 
 $$
 \begin{align*}
-p_Y(y) = p_X(g^{-1}(y)) \left|\frac{g^{-1}(y)}{dy}\right|
+f_Y(y) = f_X(g^{-1}(y)) \left|\frac{g^{-1}(y)}{dy}\right|
 \end{align*}
 $$
 
 # Inverse Sampling Transformation
-* What is the ditribution of $Y = P_X(X)$? Note $P_X$ is always monotonically increasing.
+* What is the ditribution of $Y = F_X(X)$? Note $F_X$ is always monotonically increasing.
 
 $$
 \begin{align*}
-P_Y(y) = P(P_X(X) \le y) = P(X \le P_X^{-1}(y)) = P_X(P_X^{-1}(y)) = y 
+F_Y(y) = P(F_X(X) \le y) = P(X \le F_X^{-1}(y)) =
+F_X(F_X^{-1}(y)) = y 
 \end{align*}
 $$
 
-* If $P_Y(y) = y$, then that indicates that $Y$ is a uniform random variable $U$ in $[0, 1]$.
-* Thus we have that $X = P_X^{-1}(U)$.
-* To generate samples of random variable $X$ with known distribution $P_X$ we must
+* If $F_Y(y) = y$, then that indicates that $Y$ is a uniform random variable $U$ in $[0, 1]$.
+* Thus we have that $X = F_X^{-1}(U)$.
+* To generate samples of random variable $X$ with known distribution $F_X$ we must
   1. Generate samples from uniform distribution in $[0, 1]$
-  2. Applying $P_X$ to the generated samples.   
+  2. Applying $F_X$ to the generated samples.   
 
 # Multivariate Transformations
 * Suppose $Y = g(X)$ where $g$ has an inverse.
@@ -67,7 +68,7 @@ $$
 
 $$
 \begin{align*}
-p_Y(y) = p_X(x) |J_{g^{-1}}|
+f_Y(y) = f_X(x) |J_{g^{-1}}|
 \end{align*}
 $$
 
