@@ -49,8 +49,3 @@ $$
 
 * With QDA we have to estimate $Kd^2$ covarances. 
 * Naive Bayes reduces param count of varainces to just $Kd$  
-
-$$
-g(z)_j = \frac{e^{z_j}}{\sum_{k=1}^K e^{z_k}}
-$$
-
