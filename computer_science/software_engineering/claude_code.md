@@ -68,11 +68,12 @@ argument-hint: arg1 | arg2
 
 # MCP Servers
 * You can add an mcp server with the command `claude mcp add`.
-// TODO: More information about using tools from mcp server.
+* // TODO: More information about using tools from mcp server.
 
 # Subagents
 * Subagents have their own isolated context and memory. Reduce context overload of main workflow.
 * `/agents` create new agent or list existing agents
     * Claude code can generate subagent on description.
     * Manually configurable
-* Can be invoked by adding subagent to new command markdown. 
+* Can be invoked by adding subagent to new command markdown.
+* // TODO: Async subagents
